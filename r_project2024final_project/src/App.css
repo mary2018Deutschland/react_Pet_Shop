@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.leaflet-container {
+  height: 400px !important;
+  /* Установите фиксированную высоту */
+  width: 400px !important;
+
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:hover {
+  border-color: #999;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input:active {
+  border-color: #0056b3;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #FFFFFF;
+  ;
+  background-color: #0D50FF;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #282828;
+  color: #FFFFFF;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(19, 14, 18, 0.5);
+}
+
+/* button:active {
+    background-color: #FFFFFF;
+    color:#282828 ;
+    transform: scale(0.98);
+  } */
+
+a {
+  color: #8B8B8B;
+  text-decoration: none;
+  transition: font-weight 0.3s, color 0.3s;
+
+}
+
+a:hover {
+  color: #282828;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+a:active {
+  color: #282828;
+
+}
+
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  display: inline-block;
+  position: relative;
+}
+
+input[type="checkbox"]:hover {
+  border-color: #999;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input[type="checkbox"]:active {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
