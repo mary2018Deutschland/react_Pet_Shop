@@ -1,4 +1,4 @@
-/* :root {
+:root {
   --color-light: #f5f5f5;
   --color-dark: #333333;
   --color-light-gray2: #e0e0e0;
@@ -7,9 +7,9 @@
   --blocks-margin-y: 32px;
   --border-radius-large: 8px;
   --transition-duration: 0.3s;
-} */
+}
 
-/* .footerStyle {
+.footerStyle {
   background-color: #FFFFFF;
   color: #282828;
   padding-bottom: 80px;
@@ -58,21 +58,19 @@
 
 }
 
-/* #instagramLink:hover {
-    background-color: #305891;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background: linear-gradient(
-      165deg,
+#instagramLink:hover {
+  background-color: #305891;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: linear-gradient(165deg,
       #515bd4 20%,
       #8134af 40%,
       #dd2a7b 60%,
-      #feda77 90%
-    );
-  } */
+      #feda77 90%);
+}
 
 
-/* .mapContainer {
+.mapContainer {
   margin-top: 32px;
   border-radius: 12px;
   overflow: hidden;
@@ -83,10 +81,11 @@ iframe {
   height: 350px;
   border: none;
   clip-path: inset(0 round 16px);
-} */
+}
+
 
 /* Адаптивные стили */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .gridContainer {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -127,4 +126,4 @@ iframe {
   iframe {
     height: 250px;
   }
-} */
+}

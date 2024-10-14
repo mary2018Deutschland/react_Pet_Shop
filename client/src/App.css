@@ -40,7 +40,6 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   color: #FFFFFF;
-  ;
   background-color: #0D50FF;
   border: none;
   border-radius: 6px;
@@ -126,4 +125,9 @@ input[type="checkbox"]:focus {
 input[type="checkbox"]:active {
   background-color: #0056b3;
   border-color: #0056b3;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
