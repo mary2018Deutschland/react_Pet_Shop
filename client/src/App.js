@@ -1,48 +1,37 @@
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
-import CategoryPage from "./pages/CategoryPage";
-import ProductsByCategoryPages from "./pages/ProductsByCategoryPages";
-import AllProductsPage from "./pages/AllProductsPage";
-import DiscountedProductsPage from "./pages/DiscountedProductsPage";
-import ProductDetailsPages from "./pages/ProductsByCategoryPages";
-import CartPage from "./pages/CartPage";
-import ErrorPage from "./pages/ErrorPage";
-import HomePage from "./pages/HomePage";
-import Basket from "./components/basket/Basket";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getCategories, getProducts } from "./redux/actionCreators";
-
-export const API_URL = "http://localhost:3333";
+import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/home';
+import Categories from './pages/categories';
+import AllProducts from './pages/allProducts';
+import Basket from './pages/basket';
+import ErrorPage from './pages/errorPage';
+import Discounts from './pages/discounts';
+import CategoryProducts from './pages/categoryProducts';
+import ProductDetails from './pages/productDetails';
+import Header from './components/header';
+import Footer from './components/footer';
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getCategories());
-
-    dispatch(getProducts());
-  }, []);
-
   return (
-    <div className="container">
+    <div style={{ width: '100%', maxWidth: ' 1440px', margin: '0 auto' }}>
+      <Header />
+
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/categories" element={<CategoryPage />} />
-        <Route path="/all_products" element={<AllProductsPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/category/:id" element={<CategoryProducts />} />
         <Route
-          path="/discounted_products_page"
-          element={<DiscountedProductsPage />}
+          path="category/product/:productId"
+          element={<ProductDetails />}
         />
-        <Route path="/*" element={<ErrorPage />} />
-        <Route
-          path="/categories/products/:id"
-          element={<ProductsByCategoryPages />}
-        />
-        <Route
-          path="/categories/products/details/:id"
-          element={<ProductDetailsPages />}
-        />
+        <Route path="/all_products" element={<AllProducts />} />
+
         <Route path="/basket" element={<Basket />} />
+        <Route path="/discounts" element={<Discounts />} />
+      </Routes>
+      <Footer />
+      <Routes>
+        <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </div>
   );
