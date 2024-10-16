@@ -19,7 +19,6 @@
 
     &:hover {
       transform: scale(1.05);
-      
     }
 
     .hamburgerLine {
@@ -33,9 +32,9 @@
     .hamburger {
       display: flex;
     }
-.link{
-font-size:medium;
-}
+    .link {
+      font-size: medium;
+    }
     .menu {
       display: none;
       padding: 15px;
@@ -44,7 +43,7 @@ font-size:medium;
       top: -15px;
       left: -40px;
       width: 130px;
-      background-color:#F1F3F4;
+      background-color: #f1f3f4;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, filter 0.3s ease;
     }
@@ -54,5 +53,3 @@ font-size:medium;
     }
   }
 }
-
-

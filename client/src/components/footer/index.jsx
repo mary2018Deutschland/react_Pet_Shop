@@ -1,4 +1,4 @@
-import styles from './steles.module.scss';
+import styles from './styles.module.scss';
 import MapComponent from '../map';
 import GridFooter from '../gridFooter';
 function Footer() {

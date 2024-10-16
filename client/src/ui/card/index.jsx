@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './styles.module.scss';
 import ToggleButton from '../button';
 import { useNavigate } from 'react-router-dom';
@@ -15,9 +15,22 @@ function ProductCard({
   toggledText,
 }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate();
 
-  
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 688);
+    };
+
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
+
   function calculateDiscountPercentage(price, discountPrice) {
     if (discountPrice && price > 0) {
       return Math.round(((price - discountPrice) / price) * 100);
@@ -69,7 +82,7 @@ function ProductCard({
         )}
       </div>
 
-      {isHovered && (
+      {(isHovered || isMobile) && (
         <div
           className={styles.toggleButtonContainer}
           onClick={handleButtonClick}

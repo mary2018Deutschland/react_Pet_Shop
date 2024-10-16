@@ -4,7 +4,7 @@
 .productCard {
   width: 100%;
   max-width: 300px;
-  
+
   position: relative;
   @include flex(column);
   border: 1px solid #dddddd;
@@ -12,11 +12,11 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   margin-bottom: 2.8%;
   &:hover {
-    box-shadow: 0 4px 15px rgba(19, 14, 18, 0.3); 
+    box-shadow: 0 4px 15px rgba(19, 14, 18, 0.3);
   }
 
   &:active {
-    transform: scale(0.95); 
+    transform: scale(0.95);
     box-shadow: 0 2px 10px rgba(19, 14, 18, 0.3);
   }
 
@@ -24,7 +24,6 @@
     transform: scale(1);
   }
   .productImage {
-
     width: 100%;
     min-width: 290px;
     height: 280px;
@@ -42,7 +41,7 @@
   .productTitle {
     width: 100%;
     @include spacing(0, 10% 10%);
-    @include text-ellipsis
+    @include text-ellipsis;
   }
   .pricesContainer {
     @include spacing(0, 0 10% 10%);
@@ -72,12 +71,12 @@
       opacity: 0.6;
     }
   }
- .toggleButtonContainer{
-position: absolute;
-z-index: 1000;
-width: 200px;
-top: 30%;
-left: 25%;
-min-width: max-content;
-} 
+  .toggleButtonContainer {
+    position: absolute;
+    z-index: 1000;
+    width: 200px;
+    top: 30%;
+    left: 25%;
+    min-width: max-content;
+  }
 }

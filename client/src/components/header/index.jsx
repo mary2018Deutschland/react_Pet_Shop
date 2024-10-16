@@ -2,10 +2,10 @@ import logoMain from '../../assets/icons/logoMain.svg';
 import basket from '../../assets/icons/basket.svg';
 import Nav from '../nav';
 import { NavLink } from 'react-router-dom';
-import styles from './steles.module.scss';
+import styles from './styles.module.scss';
 import { useSelector } from 'react-redux';
 function Header() {
-   const { totalQuantity } = useSelector(state => state.basket);
+  const { totalQuantity } = useSelector(state => state.basket);
   return (
     <header className={styles.headerContainer}>
       <NavLink className={styles.logoImg} to="/">

@@ -8,7 +8,7 @@ import {
 } from '../../redux/slices/basketSlice';
 import Modal from '../../ui/modal';
 import { useNavigate } from 'react-router-dom';
-import styles from './steles.module.scss';
+import styles from './styles.module.scss';
 import Input from '../../ui/input';
 import { useForm } from 'react-hook-form';
 import ToggleButton from '../../ui/button';
@@ -57,7 +57,7 @@ function Basket() {
   return (
     <div style={{ margin: '2.8%', width: '100%' }}>
       <div style={{ display: 'flex', marginBottom: '2.8%', alignItems: 'end' }}>
-        <h1>Categories</h1>
+        <h1>Shopping cart</h1>
         <div
           style={{
             height: '1px',
@@ -71,8 +71,15 @@ function Basket() {
         </span>
       </div>
       {items.length === 0 ? (
-        <div style={{ margin: '2%', fontSize: '26px', color: 'red' }}>
-          Your cart is empty
+        <div style={{ margin: '2%', fontSize: '26px' }}>
+          <p style={{ margin: '0 0 1.5rem' }}>
+            Looks like you have no items in your basket currently.
+          </p>
+          <ToggleButton
+            initialText="Continue Shopping"
+            toggledText="Continue Shopping"
+            onClick={onClickToStore}
+          />
         </div>
       ) : (
         <div className={styles.mainBasketItems}>
@@ -81,7 +88,7 @@ function Basket() {
               <div className={styles.cartContainer} key={item.id}>
                 <div className={styles.imgContainer}>
                   <img
-                    src={`http://localhost:3333/${item.image}`}
+                    src={`https://olga-api.pet-shop.click/${item.image}`}
                     alt={item.title}
                   />
                 </div>
@@ -95,7 +102,6 @@ function Basket() {
                     >
                       -
                     </span>
-
                     <h4
                       style={{
                         padding: '1% 15px',
@@ -192,7 +198,7 @@ function Basket() {
               {errors.email && <p>{errors.email.message}</p>}
               <ToggleButton
                 type="submit"
-                initialText="Get a discount"
+                initialText="Order"
                 toggledText="Request Submitted"
                 style={{ width: '100%', maxWidth: '400px' }}
               />
